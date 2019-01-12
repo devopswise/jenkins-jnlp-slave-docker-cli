@@ -1,4 +1,4 @@
-node('jenkins-python-slave') {
+node('jenkins-jnlp-slave-docker-cli') {
 
     def app
 
@@ -11,7 +11,7 @@ node('jenkins-python-slave') {
     stage('Build image') {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("devopswise/jenkins-ssh-slave-docker-cli")
+        app = docker.build("devopswise/jenkins-jnlp-slave-docker-cli")
     }
 
     stage('Push image') {

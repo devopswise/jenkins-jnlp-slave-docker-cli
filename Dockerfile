@@ -1,5 +1,6 @@
-FROM jenkins/ssh-slave
+FROM jenkins/jnlp-slave
 
+USER root
 # Install Docker client
 ENV DOCKERVERSION=18.03.1-ce
 RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz \
